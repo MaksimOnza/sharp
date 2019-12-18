@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 
-class Morse_matrix : GeneralCipherClass, IMorse_crypt
+class Morse_Cipher : GeneralCipherClass, ICrypt
 {
-    public Morse_matrix(string str = "")
+    public Morse_Cipher(string str = "")
     {
         if (str == "")
         {
@@ -85,8 +85,13 @@ class Morse_matrix : GeneralCipherClass, IMorse_crypt
             try
             {
                 ClassOfOutToScreen.MorseScreen();
-                int number = int.Parse(Console.ReadLine());
-                Morse_matrix morseCode;
+                string choise = Console.ReadLine();
+                if(GeneralCipherClass.SelectEnterForExit(choise))
+                {
+                    break;
+                }
+                int number = int.Parse(choise);
+                Morse_Cipher morseCode;
                 if (number <= 3 & number >= 1)
                 {
                     switch (number)
@@ -95,22 +100,22 @@ class Morse_matrix : GeneralCipherClass, IMorse_crypt
                             Console.Clear();
                             Console.WriteLine("Enter Word");
                             string val1 = Console.ReadLine();
-                            morseCode = new Morse_matrix(val1);
+                            morseCode = new Morse_Cipher(val1);
                             morseCode.crypt(val1);
                             ClassOfOutToScreen.OutQuestionOfContinueScreen();
                             val1 = Console.ReadLine();
-                            exitStr = ChoiceContinueAct(val1);
+                            exitStr = SelectContinueAct(val1);
                             break;
                         case 2:
                             Console.WriteLine("Enter Word");
                             string val2 = Console.ReadLine();
-                            morseCode = new Morse_matrix(val2);
+                            morseCode = new Morse_Cipher(val2);
                             morseCode.decrypt(val2);
                             break;
                         case 3:
                             Console.WriteLine("Enter Word Or Signal");
                             string val3 = Console.ReadLine();
-                            morseCode = new Morse_matrix(val3);
+                            morseCode = new Morse_Cipher(val3);
                             morseCode.SoundOfMorse(val3);
                             break;
                         default:

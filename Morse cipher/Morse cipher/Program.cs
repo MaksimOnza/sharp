@@ -23,7 +23,6 @@ namespace Morse_cipher
                     {
                         try
                         {
-                            //Вызов класса для выбора типа шифра
                             ChoiseCipher choiseCipher = new ChoiseCipher(numCase);
                             choiseCipher = null;
                         }
@@ -36,18 +35,6 @@ namespace Morse_cipher
                     else
                     {
                         throw new Exception();
-                    }
-                    Console.WriteLine("Continue? If Yes Press to 'y'.");
-                    Console.WriteLine("Continue? If No Press to 'n'.");
-                    enterString = Console.ReadLine();
-                    if (enterString == "n")
-                    {
-                        booleanVar = false; Console.WriteLine("End");
-                        break;
-                    }
-                    if (enterString == "y")
-                    {
-                        booleanVar = true; Console.WriteLine("Continue");
                     }
                 }
                 catch (Exception)

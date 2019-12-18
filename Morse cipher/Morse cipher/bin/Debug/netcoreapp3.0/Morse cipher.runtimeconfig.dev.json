@@ -1,0 +1,9 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Lenovo E530 MV\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Lenovo E530 MV\\.nuget\\packages",
+      "D:\\Microsoft\\Xamarin\\NuGet"
+    ]
+  }
+}

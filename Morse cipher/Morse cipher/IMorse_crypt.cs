@@ -1,6 +1,6 @@
 ﻿using System;
 
-interface IMorse_crypt
+interface ICrypt
 {
     void crypt(string word);
     void decrypt(string signal);

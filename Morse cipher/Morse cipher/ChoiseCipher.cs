@@ -19,7 +19,7 @@ public class ChoiseCipher
         switch (num)
         {
             case 1:
-                Morse_matrix.StartMorse();
+                Morse_Cipher.StartMorse();
                 break;
             case 3:
                 CesarCipher.StartCaesar();

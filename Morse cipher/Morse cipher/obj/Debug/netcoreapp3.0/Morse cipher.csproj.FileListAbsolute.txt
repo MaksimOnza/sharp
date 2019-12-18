@@ -1,0 +1,11 @@
+D:\c# обучение\Project\Morse cipher\Morse cipher\bin\Debug\netcoreapp3.0\Morse cipher.exe
+D:\c# обучение\Project\Morse cipher\Morse cipher\bin\Debug\netcoreapp3.0\Morse cipher.deps.json
+D:\c# обучение\Project\Morse cipher\Morse cipher\bin\Debug\netcoreapp3.0\Morse cipher.runtimeconfig.json
+D:\c# обучение\Project\Morse cipher\Morse cipher\bin\Debug\netcoreapp3.0\Morse cipher.runtimeconfig.dev.json
+D:\c# обучение\Project\Morse cipher\Morse cipher\bin\Debug\netcoreapp3.0\Morse cipher.dll
+D:\c# обучение\Project\Morse cipher\Morse cipher\bin\Debug\netcoreapp3.0\Morse cipher.pdb
+D:\c# обучение\Project\Morse cipher\Morse cipher\obj\Debug\netcoreapp3.0\Morse cipher.csprojAssemblyReference.cache
+D:\c# обучение\Project\Morse cipher\Morse cipher\obj\Debug\netcoreapp3.0\Morse cipher.AssemblyInfoInputs.cache
+D:\c# обучение\Project\Morse cipher\Morse cipher\obj\Debug\netcoreapp3.0\Morse cipher.AssemblyInfo.cs
+D:\c# обучение\Project\Morse cipher\Morse cipher\obj\Debug\netcoreapp3.0\Morse cipher.dll
+D:\c# обучение\Project\Morse cipher\Morse cipher\obj\Debug\netcoreapp3.0\Morse cipher.pdb
