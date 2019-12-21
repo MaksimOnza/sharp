@@ -7,14 +7,14 @@ namespace Morse_cipher
         
         private static void MainLoop()
         {
-            bool booleanVar = true;
+            bool booleanGame = true;
             string enterString;
 
-            while (booleanVar)
+            while (booleanGame)
             {
                 try
                 {
-                    ClassOfOutToScreen.MainScreenForChoise();
+                    ClassMessDisplay.MainScreenForChoise();
                     enterString = Console.ReadLine();
                     //Условие работает только при первом вводе
                     if (enterString == " ") { Environment.Exit(0); }
@@ -28,7 +28,7 @@ namespace Morse_cipher
                         }
                         catch (Exception)
                         {
-                            booleanVar = false;
+                            booleanGame = false;
                             Console.WriteLine("Wrong digit entered");
                         }
                     }
@@ -47,7 +47,7 @@ namespace Morse_cipher
 
         static void Main(string[] args)
         {
-            ClassOfOutToScreen.HelloMessage();
+            ClassMessDisplay.HelloMessage();
             MainLoop();
         } 
     }

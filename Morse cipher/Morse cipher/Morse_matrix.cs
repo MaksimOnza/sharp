@@ -1,7 +1,5 @@
-﻿using Morse_cipher;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Threading;
 
 class Morse_Cipher : GeneralCipherClass, ICrypt
 {
@@ -43,29 +41,12 @@ class Morse_Cipher : GeneralCipherClass, ICrypt
 
         }
     }
+    
     public void SoundOfMorse(string signal)
     {
-        int addFreq = 500;
-        signal = signal.ToUpper();
-        foreach (char c in signal.ToCharArray())
-        {
-            Console.WriteLine($"{c} -> {this[c.ToString()]}");
-            foreach (char s in this[c.ToString()])
-            {
-                if (s == '1' | s == '-')
-                {
-                    Console.Beep(440 + addFreq, 300);
-                    Thread.Sleep(100);
-                }
-                else
-                {
-                    Console.Beep(440 + addFreq, 100);
-                    Thread.Sleep(100);
-                }
-            }
-            Thread.Sleep(500);
-        }
+        var sound = new Sounds(signal);
     }
+
     public Dictionary<string, string> TransformToCharFromDigit()
     {
         Dictionary<string, string> str_matrix_2 = new Dictionary<string, string>(OriginalAlphabet);
@@ -84,7 +65,7 @@ class Morse_Cipher : GeneralCipherClass, ICrypt
         {
             try
             {
-                ClassOfOutToScreen.MorseScreen();
+                ClassMessDisplay.MorseScreen();
                 string choise = Console.ReadLine();
                 if(GeneralCipherClass.SelectEnterForExit(choise))
                 {
@@ -102,7 +83,7 @@ class Morse_Cipher : GeneralCipherClass, ICrypt
                             string val1 = Console.ReadLine();
                             morseCode = new Morse_Cipher(val1);
                             morseCode.crypt(val1);
-                            ClassOfOutToScreen.OutQuestionOfContinueScreen();
+                            ClassMessDisplay.OutQuestionOfContinueScreen();
                             val1 = Console.ReadLine();
                             exitStr = SelectContinueAct(val1);
                             break;

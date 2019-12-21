@@ -7,16 +7,16 @@ using System.Collections.Generic;
     public List<string> ListOfKeyORValue;
  
     //Indexator
-    internal string this[string word]
+    internal string this[string symbol]
     {
         get
         {
-            return OriginalAlphabet[word];
+            return OriginalAlphabet[symbol];
         }
         set
         {
-            if(OriginalAlphabet.ContainsKey(word))
-                OriginalAlphabet[word] = value;
+            if(OriginalAlphabet.ContainsKey(symbol))
+                OriginalAlphabet[symbol] = value;
         }
     }
     //Out matrix Alphabet
@@ -33,23 +33,23 @@ using System.Collections.Generic;
         ListOfKeyORValue = new List<string>();
         if (key)
         {
-            foreach (string c in OriginalAlphabet.Keys)
+            foreach (string singleKey in OriginalAlphabet.Keys)
             {
-                ListOfKeyORValue.Add(c);
+                ListOfKeyORValue.Add(singleKey);
             }
         }
         else
         {
-            foreach (string p in OriginalAlphabet.Values)
+            foreach (string value in OriginalAlphabet.Values)
             {
-                ListOfKeyORValue.Add(p);
+                ListOfKeyORValue.Add(value);
             }
         }
         return ListOfKeyORValue;
     }
-    public static bool SelectContinueAct(string str)
+    public static bool SelectContinueAct(string select)
     {
-        if (str == "n")
+        if (select == "n")
         {
             return false;
         }

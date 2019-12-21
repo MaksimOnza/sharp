@@ -26,21 +26,19 @@ class CesarCipher : GeneralCipherClass, ICrypt
     {
         ListStringOfKeys = Show_matrix_key_value(true);
         ListOfCesarCipher = new Dictionary<int, string>();
-        int j = 0;
         for (int i = shift; i < ListStringOfKeys.Count; i++)
         {
             AlpabetListModified.Add(ListStringOfKeys[i]);//........................
-            j++;
         }
         for (int i = 0; i < shift; i++)
         {
             AlpabetListModified.Add(ListStringOfKeys[i]);//...........................
         }
-        int ji = 0;
+        int indexOfCeaserCipher = 0;
         foreach (string symbol in AlpabetListModified)
         {
-            ListOfCesarCipher.Add(ji, symbol);
-            ji++;
+            ListOfCesarCipher.Add(indexOfCeaserCipher, symbol);
+            indexOfCeaserCipher++;
         }
     }
     public int GetKeyByValue(string value)
@@ -54,29 +52,29 @@ class CesarCipher : GeneralCipherClass, ICrypt
     }
     private void ToScreenSymbols()
     {
-        foreach (string s in ModifiedListSymbols)//---------------------------
+        foreach (string symbol in ModifiedListSymbols)//---------------------------
         {
-            Console.Write(s);
+            Console.Write(symbol);
         }
         Console.Write(" -> ");
-        foreach (string s in OrignalListSymbols)
+        foreach (string symbol in OrignalListSymbols)
         {
-            Console.Write(s);
+            Console.Write(symbol);
         }
         Console.WriteLine();
     }
     public void crypt(string word)
     {
-        string d;
+        string tempSymbol;
         word = word.ToUpper();
         Console.WriteLine(word);
         Console.WriteLine();
         Console.WriteLine();
-        foreach (char c in word)
+        foreach (char symbol in word)
         {
-            d = AlpabetListModified.Find((x) => x == c.ToString());//......................
-            ModifiedListSymbols.Add(d); //--------------------
-            int keys = GetKeyByValue(c.ToString());
+            tempSymbol = AlpabetListModified.Find((x) => x == symbol.ToString());//......................
+            ModifiedListSymbols.Add(tempSymbol); //--------------------
+            int keys = GetKeyByValue(symbol.ToString());
             OrignalListSymbols.Add(ListStringOfKeys[keys]);
         }
         ToScreenSymbols();
@@ -94,7 +92,7 @@ class CesarCipher : GeneralCipherClass, ICrypt
         {
             try
             {
-                ClassOfOutToScreen.CaesarScreen();
+                ClassMessDisplay.CaesarScreen();
                 string choise = Console.ReadLine();
                 if (GeneralCipherClass.SelectEnterForExit(choise))
                 {
@@ -115,7 +113,7 @@ class CesarCipher : GeneralCipherClass, ICrypt
                             string val1 = Console.ReadLine();
                             cesarCode = new CesarCipher(shift);
                             cesarCode.crypt(val1);
-                            ClassOfOutToScreen.OutQuestionOfContinueScreen();
+                            ClassMessDisplay.OutQuestionOfContinueScreen();
                             val1 = Console.ReadLine();
                             exitStr = SelectContinueAct(val1);
                             break;
