@@ -1,0 +1,14 @@
+D:\Develop\projects\c#\Weather\ParsingWeather\ParsingWeather\bin\Debug\netcoreapp3.1\ParsingWeather.exe
+D:\Develop\projects\c#\Weather\ParsingWeather\ParsingWeather\bin\Debug\netcoreapp3.1\ParsingWeather.deps.json
+D:\Develop\projects\c#\Weather\ParsingWeather\ParsingWeather\bin\Debug\netcoreapp3.1\ParsingWeather.runtimeconfig.json
+D:\Develop\projects\c#\Weather\ParsingWeather\ParsingWeather\bin\Debug\netcoreapp3.1\ParsingWeather.runtimeconfig.dev.json
+D:\Develop\projects\c#\Weather\ParsingWeather\ParsingWeather\bin\Debug\netcoreapp3.1\ParsingWeather.dll
+D:\Develop\projects\c#\Weather\ParsingWeather\ParsingWeather\bin\Debug\netcoreapp3.1\ParsingWeather.pdb
+D:\Develop\projects\c#\Weather\ParsingWeather\ParsingWeather\obj\Debug\netcoreapp3.1\ParsingWeather.csprojAssemblyReference.cache
+D:\Develop\projects\c#\Weather\ParsingWeather\ParsingWeather\obj\Debug\netcoreapp3.1\ParsingWeather.AssemblyInfoInputs.cache
+D:\Develop\projects\c#\Weather\ParsingWeather\ParsingWeather\obj\Debug\netcoreapp3.1\ParsingWeather.AssemblyInfo.cs
+D:\Develop\projects\c#\Weather\ParsingWeather\ParsingWeather\obj\Debug\netcoreapp3.1\ParsingWeather.dll
+D:\Develop\projects\c#\Weather\ParsingWeather\ParsingWeather\obj\Debug\netcoreapp3.1\ParsingWeather.pdb
+D:\Develop\projects\c#\Weather\ParsingWeather\ParsingWeather\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Develop\projects\c#\Weather\ParsingWeather\ParsingWeather\obj\Debug\netcoreapp3.1\ParsingWeather.csproj.CopyComplete
+D:\Develop\projects\c#\Weather\ParsingWeather\ParsingWeather\bin\Debug\netcoreapp3.1\AWSSDK.Core.dll
