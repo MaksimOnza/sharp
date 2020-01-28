@@ -7,6 +7,7 @@ public class SelectWebItem:MenuItem
 	public SelectWebItem()
 	{
 		Children.Add(new WeatherstackItem());
+		Children.Add(new OpenweathermapItem());
 		Children.Add(new ExitItem());
 		menu = new Menu(Children);
 	}

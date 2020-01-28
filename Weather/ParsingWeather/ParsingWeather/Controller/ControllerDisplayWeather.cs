@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
@@ -6,6 +7,8 @@ using ThirdParty.Json.LitJson;
 
 public class ControllerDisplayWeather
 {
+	DisplayWeather displayWeather;
+	ParserWeb parse;
 	public ControllerDisplayWeather()
 	{
 		
@@ -15,8 +18,13 @@ public class ControllerDisplayWeather
 		string city = getCitybName();
 		string webName = getWebName();
 		string url = $"http://api.{webName}/{TransitData.getAddLink()}?{TransitData.getNameQueryKey()}={TransitData.getKey()}&{TransitData.getNameQueryCity()}={city}";
-		//Connect connect = new Connect(webName, city);
-		connectToWeb(url);
+		Connect connect = new Connect(webName, city, url);
+		string response = connect.GetResponse();
+		ParserWeb parser = TransitData.Parser(webName);
+		JToken temp = parser.start(response);
+		Console.WriteLine(temp);
+		Console.ReadKey();
+		//displayWeather.start(city);
 	}
 	
 	 string getWebName()
@@ -27,34 +35,7 @@ public class ControllerDisplayWeather
 	{
 		return TransitData.cityName;
 	}
-	void connectToWeb(string url)
-	{
-		var request = (HttpWebRequest)WebRequest.Create(url);
-		HttpWebResponse HttpWResp = (HttpWebResponse)request.GetResponse();
-		Stream streamResponse = HttpWResp.GetResponseStream();
-
-		StreamReader reader = new StreamReader(streamResponse);
-		string response = reader.ReadToEnd();
-		reader.Close();
-		reader.Dispose();
-
-		string jsonStringsign = response;
-		JsonData json = JsonMapper.ToObject(jsonStringsign);
-		foreach (var item in TransitData.listNameOutputParam)
-		{
-			if (json != null)
-			{
-				var temp = json[item];
-				json = temp;
-			}
-			else
-			{
-				Console.WriteLine(" -> json is null");
-			}
-		}		
-		Console.WriteLine(json.ToString());
-		Console.ReadKey();
-	}
+	
 }
 	
 

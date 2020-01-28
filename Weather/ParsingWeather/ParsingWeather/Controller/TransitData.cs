@@ -10,7 +10,9 @@ public static class TransitData
 	public static string addLink;
 	public static List<string> listNameOutputParam = new List<string>();
 	public static Dictionary<string, string> dictRequestParam = new Dictionary<string, string>();
-	public static string gettWeb()
+    public static Dictionary<string, ParserWeb> dictParser = new Dictionary<string, ParserWeb>() { { "weatherstack.com", new WeatherstackParser() },{ "openweathermap.org", new OpenweathermapParser() } };
+
+    public static string gettWeb()
     {
         return webName;
     }
@@ -37,5 +39,9 @@ public static class TransitData
     public static string getNameQueryKey()
     {
         return dictRequestParam["key"];
+    }
+    public static ParserWeb Parser(string web)
+    {
+        return dictParser[web];
     }
  }
