@@ -2,14 +2,12 @@
 
 public class ExitItem: MenuItem
 {
-	void start()
+	public override void start()
 	{
 		Console.Clear();
 	}
-	public string getName { get; }
-
-	public string getKeyName { get; }
-
-	public string getKey { get; }
+	public override string Name { get; } = "Exit";
+	public override string KeyName { get; } = "q";
+	public override string Key { get; } = "q";
 
 }

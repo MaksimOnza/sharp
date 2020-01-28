@@ -117,11 +117,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Develop\\projects\\c#\\Weather\\ParsingWeather\\ParsingWeather\\ParsingWeather.csproj",
+      "projectUniqueName": "D:\\Develop\\projects\\c#\\sharp\\Weather\\ParsingWeather\\ParsingWeather\\ParsingWeather.csproj",
       "projectName": "ParsingWeather",
-      "projectPath": "D:\\Develop\\projects\\c#\\Weather\\ParsingWeather\\ParsingWeather\\ParsingWeather.csproj",
+      "projectPath": "D:\\Develop\\projects\\c#\\sharp\\Weather\\ParsingWeather\\ParsingWeather\\ParsingWeather.csproj",
       "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-      "outputPath": "D:\\Develop\\projects\\c#\\Weather\\ParsingWeather\\ParsingWeather\\obj\\",
+      "outputPath": "D:\\Develop\\projects\\c#\\sharp\\Weather\\ParsingWeather\\ParsingWeather\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Microsoft\\Xamarin\\NuGet\\"

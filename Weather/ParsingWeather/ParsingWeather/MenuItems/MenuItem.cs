@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 
-public interface MenuItem
+public class MenuItem
 {
-	
-	void start() { }
-	string getName{ get;}
-	string getKeyName{ get;}
-	string getKey{ get;}
+	public List<MenuItem> Children = new List<MenuItem>();
+	public virtual void start() { }
+	public virtual string Name { get;}
+	public virtual string KeyName { get;}
+	public virtual string Key { get;}
 }

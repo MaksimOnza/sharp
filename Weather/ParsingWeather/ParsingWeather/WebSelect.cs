@@ -13,7 +13,7 @@ public class WebSelect: MenuItem
     public string getKey { get; } = "w";
 
 
-    public WebSelect(ArrayList items)
+    public WebSelect(List<MenuItem> items)
 	{
         webSelect = new Menu(items);
     }

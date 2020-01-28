@@ -1,0 +1,57 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "ParsingWeather/1.0.0": {
+        "dependencies": {
+          "AWSSDK.Core": "3.3.104.20",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "runtime": {
+          "ParsingWeather.dll": {}
+        }
+      },
+      "AWSSDK.Core/3.3.104.20": {
+        "runtime": {
+          "lib/netstandard2.0/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.104.20"
+          }
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.3.23909"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ParsingWeather/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AWSSDK.Core/3.3.104.20": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MZKp+3zIZxXEboia3aFvzzUPPnZ3injVNVF4PPgfL0arA3VxRbI/IKFWYHsoFjYvi8xqfAg5hTbYmxAuZFqufg==",
+      "path": "awssdk.core/3.3.104.20",
+      "hashPath": "awssdk.core.3.3.104.20.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+    }
+  }
+}
