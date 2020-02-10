@@ -1,17 +1,23 @@
 ﻿using System;
+using System.Collections.Generic;
 
 public class WeatherstackItem: MenuItem
 {
-	WeatherstackData WebData;
-	public WeatherstackItem()
+	State state;
+
+	public WeatherstackItem(State state)
 	{
-		WebData = new WeatherstackData();
+		this.state = state;
 	}
-	override public void start()
+
+	override public void Start()
 	{
-		new WriteToTransit(WebData);
+		state.resource = Name;
 	}
-	public override string Name { get; } = "WeatherstackItem";
+
+	public override string Name { get; } = "Weatherstack";
+
 	public override string KeyName { get; } = "1";
+
 	public override string Key { get; } = "1";
 }

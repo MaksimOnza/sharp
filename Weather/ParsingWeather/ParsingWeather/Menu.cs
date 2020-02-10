@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 
 public class Menu
@@ -7,18 +6,19 @@ public class Menu
 	string key = "";
 	char EXIT = 'q';
 	private List<MenuItem> Children = new List<MenuItem>();
+
 	public Menu(List<MenuItem> items)
 	{
 		Children = items;
 	}
 
-	public void start()
+	public void Start()
 	{
 		key = "";
 		while (key != EXIT.ToString())
 		{
 			Console.Clear();
-			Console.WriteLine($"City -> { TransitData.getCity()}=============Web -> {TransitData.gettWeb()}");
+			Console.WriteLine($"  ============= ");
 			Console.WriteLine("*****************************************************************");
 			foreach (var item in Children)
 			{
@@ -28,7 +28,7 @@ public class Menu
 			foreach (var item in Children)
 			{
 				if (item.Key == key)
-					item.start();
+					item.Start();
 			}
 		}
 	} 

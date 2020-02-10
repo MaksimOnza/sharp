@@ -2,16 +2,21 @@
 
 public class OpenweathermapItem: MenuItem
 {
-	OpenweathermapData WebData;
-	public OpenweathermapItem()
+	State state;
+
+	public OpenweathermapItem(State state)
 	{
-		WebData = new OpenweathermapData();
+		this.state = state;
 	}
-	override public void start()
+
+	override public void Start()
 	{
-		new WriteToTransit(WebData);
+		state.resource = Name;
 	}
-	public override string Name { get; } = "WeatherstackItem";
+
+	public override string Name { get; } = "Openweathermap";
+
 	public override string KeyName { get; } = "2";
+
 	public override string Key { get; } = "2";
 }
